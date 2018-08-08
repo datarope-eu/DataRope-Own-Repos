@@ -11,7 +11,7 @@ The template file comes in two variations:
 
 
 ## Further reading
-Readers interested intaking the deep dive into Hardening WordPress installs might like the following Codex page:
+Readers interested in taking the deep dive into Hardening WordPress installs might like the following Codex page:
 
 https://codex.wordpress.org/Editing_wp-config.php
 
