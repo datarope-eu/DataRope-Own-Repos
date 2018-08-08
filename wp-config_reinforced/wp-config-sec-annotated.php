@@ -24,10 +24,10 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wordpress_*' );
+define( 'DB_NAME', 'wp****_*' );
 
 /** MySQL database username */
-define( 'DB_USER', 'wordpress_*' );
+define( 'DB_USER', 'wp****_*' );
 
 /** MySQL database password */
 define('DB_PASSWORD', '**********');
