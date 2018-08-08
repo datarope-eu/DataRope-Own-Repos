@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Raw, hardened base configuration for WordPress
+ * Annotated, hardened base configuration for WordPress
  * August 2018. Please fill in your site details where required!
  * 
  * The wp-config.php creation script uses this file during the
@@ -49,8 +49,12 @@ define( 'DB_COLLATE', '' );
  * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
  *
  * @since 2.6.0
+ * 
+ * PLEASE DON'T USE THE SALTS BELOW, CREATE YOUR OWN. 
+ * THEY'RE NO LONGER CONSIDERED SAFE ONCE PUBLISHED!
+ * 
  */
-define('AUTH_KEY',         '7u}tx5 &O?M{F<T3l>batfJFZvZo=^E(F*d=1iuK#m{@DT$2 ~Kj*[[EjQ+zf!G+');
+define('AUTH_KEY',         '7u}tx5 &O?M{F<T3l>batfJFZvZo=^E(F*d=1iuK#m{@DT$2 ~Kj*[[EjQ+zf!G+');				// Please, replace the Salts with your own!
 define('SECURE_AUTH_KEY',  'S[Q1aEW9T^*b0@R$ER=#q(zT)^|KzP&hGZ$i)ONX3CpJzgt(5QWpu_cWu*0+4:uX');
 define('LOGGED_IN_KEY',    'lsA7bG8PwDkXZlcZ4l4,88u;G2h(rEj|/PaVdj.&|~c*+cp&D@-CD&^v](-kq!+8');
 define('NONCE_KEY',        ',2nx2fWw/ynB~QR2&F7fd-qL<YQE@BA>dEcI;js-1TN|E(3a;@s@`q=j1KF4PYO;');
