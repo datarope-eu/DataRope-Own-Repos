@@ -24,16 +24,17 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp****_*' );
+define( 'DB_NAME', 'wp****_*' );															// HARDEN: Use uncommon, hard-to-guess names for Database Name and User
 
 /** MySQL database username */
 define( 'DB_USER', 'wp****_*' );
 
 /** MySQL database password */
-define('DB_PASSWORD', '**********');
-
+define('DB_PASSWORD', '**********');														// HARDEN: Use Password-length of min. 12+ characters, 15+ recommended
+																							// HARDEN: Use characters in upper/lower case, numbers, AND symbols!
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost:3306' );
+define( 'DB_HOST', 'localhost:3306' );														// HARDEN: Unless necessary, don't use remote database hosts.
+																							// HARDEN: 'localhost' means your database host is on your own system.
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -54,7 +55,7 @@ define( 'DB_COLLATE', '' );
  * THEY'RE NO LONGER CONSIDERED SAFE ONCE PUBLISHED!
  * 
  */
-define('AUTH_KEY',         '7u}tx5 &O?M{F<T3l>batfJFZvZo=^E(F*d=1iuK#m{@DT$2 ~Kj*[[EjQ+zf!G+');				// Please, replace the Salts with your own!
+define('AUTH_KEY',         '7u}tx5 &O?M{F<T3l>batfJFZvZo=^E(F*d=1iuK#m{@DT$2 ~Kj*[[EjQ+zf!G+');				// HARDEN: Please, replace the Salts with your own!
 define('SECURE_AUTH_KEY',  'S[Q1aEW9T^*b0@R$ER=#q(zT)^|KzP&hGZ$i)ONX3CpJzgt(5QWpu_cWu*0+4:uX');
 define('LOGGED_IN_KEY',    'lsA7bG8PwDkXZlcZ4l4,88u;G2h(rEj|/PaVdj.&|~c*+cp&D@-CD&^v](-kq!+8');
 define('NONCE_KEY',        ',2nx2fWw/ynB~QR2&F7fd-qL<YQE@BA>dEcI;js-1TN|E(3a;@s@`q=j1KF4PYO;');
@@ -69,31 +70,35 @@ define('NONCE_SALT',       'g}s5BPJ;h+TR/NMWw&oZ)(i/>%[!MmO&@a`ubvfyj.glL/j,TU`O
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = '****_';
+$table_prefix = '****_';																	// HARDEN: Always change the default 'wp_' during setup to unintelligible stuff like 'pX3t58'
+																							// HARDEN: Changing it later means you'll have to manually alter the backend tables, too.
 
-define('FORCE_SSL_LOGIN', true);
+																							
+define('FORCE_SSL_LOGIN', true);															// HARDEN: Force the system to accept only user / admin logins via SSL
 define('FORCE_SSL_ADMIN', true);
-define('EMPTY_TRASH_DAYS', 7);
-define('WP_POST_REVISIONS', 5);
+
+define('EMPTY_TRASH_DAYS', 7);																// HOUSEKEEPING: Empty objects in internal WordPress recycle bin after seven days. Keeps your install tidy.
+define('WP_POST_REVISIONS', 5);																// HOUSEKEEPING: Keep only last five revisions of each post. Saves time and disk space.
 
 /**
- * WordPress Debugging Options - Do NOT use for live sites
+ * WordPress Debugging Options - Avoid debugging sites in production!
  * Any error logs will reside in
  * /wp-content/debug.log, using PHP's built-in error_log() function
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', false);																	// HARDEN: Recommended settings. Uncontrolled on-screen error / debug messages could open up vulnerabilities.
 define('WP_DEBUG_DISPLAY', false );
 define('WP_DEBUG_LOG', true );
-@ini_set( 'display_errors', 0 );
+@ini_set( 'log_errors', true );																// HARDEN: Logging any errors instead of displaying to avoid erratic site behaviour, vulnerabilities 
 
 
-define( 'NOBLOGREDIRECT', 'https://yourwebsite.com' );
+define( 'NOBLOGREDIRECT', 'https://yourwebsite.com' );										// HARDEN: Automatic redirect if user tries nonexistent subdomains or /folders
 # Not necessary when DISALLOW_FILE_MODS set to TRUE
-define( 'DISALLOW_FILE_EDIT', false );
-define( 'DISALLOW_FILE_MODS', true );
+define( 'DISALLOW_FILE_EDIT', false );														// HARDEN: Locking down your admin panel.
+define( 'DISALLOW_FILE_MODS', true );														// HARDEN: Disabling Admin Plugin / Theme Editor, Update / Install functions.
+																							// HARDEN: Remaining Access Options- SFTP uploads, manual updates, use of WP-CLI
 
-# define( 'WP_ACCESSIBLE_HOSTS', 'api.wordpress.org,*.github.com' );
-define( 'WP_HTTP_BLOCK_EXTERNAL', false );
+# define( 'WP_ACCESSIBLE_HOSTS', 'api.wordpress.org,*.github.com' );						// HARDEN: Locking down internet access (preventing malicious file downloads) from within your site.
+define( 'WP_HTTP_BLOCK_EXTERNAL', false );													// HARDEN: Possibility to whitelist domains or domain groups
 
 # delete all cropped versions, keep the original
 define( 'IMAGE_EDIT_OVERWRITE', true );
@@ -102,7 +107,7 @@ define( 'IMAGE_EDIT_OVERWRITE', true );
 # Necessary as soon as users / third parties can post content
 define( 'DISALLOW_UNFILTERED_HTML', true );
 
-define('WP_ALLOW_MULTISITE', true);
+define('WP_ALLOW_MULTISITE', false);
 /* That's all, stop editing! Happy blogging. */
 /* +-------------------------------------------------------------+ */
 
