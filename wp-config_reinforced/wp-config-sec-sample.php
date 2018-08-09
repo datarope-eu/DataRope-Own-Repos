@@ -69,6 +69,7 @@ $table_prefix = '****_';
 
 define('FORCE_SSL_LOGIN', true);
 define('FORCE_SSL_ADMIN', true);
+
 define('EMPTY_TRASH_DAYS', 7);
 define('WP_POST_REVISIONS', 5);
 
@@ -80,7 +81,7 @@ define('WP_POST_REVISIONS', 5);
 define('WP_DEBUG', false);
 define('WP_DEBUG_DISPLAY', false );
 define('WP_DEBUG_LOG', true );
-@ini_set( 'display_errors', 0 );
+@ini_set( 'log_errors', true );
 
 
 define( 'NOBLOGREDIRECT', 'https://yourwebsite.com' );
@@ -98,7 +99,7 @@ define( 'IMAGE_EDIT_OVERWRITE', true );
 # Necessary as soon as users / third parties can post content
 define( 'DISALLOW_UNFILTERED_HTML', true );
 
-define('WP_ALLOW_MULTISITE', true);
+define('WP_ALLOW_MULTISITE', false);
 /* That's all, stop editing! Happy blogging. */
 /* +-------------------------------------------------------------+ */
 
