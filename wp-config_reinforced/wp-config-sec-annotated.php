@@ -101,14 +101,15 @@ define( 'DISALLOW_FILE_MODS', true );														// HARDEN: Disabling Admin Pl
 define( 'WP_HTTP_BLOCK_EXTERNAL', false );													// HARDEN: Possibility to whitelist domains or domain groups
 
 # delete all cropped versions, keep the original
-define( 'IMAGE_EDIT_OVERWRITE', true );
+define( 'IMAGE_EDIT_OVERWRITE', true );														// HOUSEKEEPING: delete all unnecessary & surplus files
 
 # Unfiltered: Links, Javascript etc.
 # Necessary as soon as users / third parties can post content
-define( 'DISALLOW_UNFILTERED_HTML', true );
+define( 'DISALLOW_UNFILTERED_HTML', true );													// HARDEN: You'll need this if you allow users to add text content like comments etc
+																							// HARDEN: Alien scripts or links should not be part of your site.
 
 define('WP_ALLOW_MULTISITE', false);
-/* That's all, stop editing! Happy blogging. */
+/* That's all, stop editing! Happy blogging. */												// HINT: Enjoy your blog and create Poetry!
 /* +-------------------------------------------------------------+ */
 
 /** Absolute path to the WordPress directory. */
