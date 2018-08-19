@@ -3,7 +3,7 @@
 
 Using NGINX as your WordPress Webserver or Reverse Proxy may seriously enhance site performance and security. I'll start with a simple illustration, done in draw.io.
 
-## Word in Progress
+## Work in Progress
 Content may change at any time. I'm actively developing this issue, for both fun and educational purposes.
 
 ## Further reading
