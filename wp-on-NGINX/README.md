@@ -1,7 +1,8 @@
 # WP-ON-NGINX
 ### Run WordPress on NGINX for better performance & increased security
 
-Using NGINX as your WordPress Webserver or Reverse Proxy may seriously enhance site performance and security. I'll start with a simple illustration, done in draw.io.
+A repository detailing how to set up NGINX to smoothly run WordPress sites.
+Starting with an infographic outline. Adding config file snippets shortly.
 
 ## Work in Progress
 Content may change at any time. I'm actively developing this issue, for both fun and educational purposes.
