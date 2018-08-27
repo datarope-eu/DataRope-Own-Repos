@@ -10,9 +10,9 @@ Content may change at any time. I'm actively developing this issue, for both fun
 ## Further reading
 Readers interested in taking the deep dive into NGINX for WordPress might like the following pages:
 
-WordPress Codex             : https://codex.wordpress.org/Nginx
-NGINX Config file structure : http://nginx.org/en/docs/beginners_guide.html#conf_structure
+WordPress Codex: https://codex.wordpress.org/Nginx
+
+NGINX Config file structure: http://nginx.org/en/docs/beginners_guide.html#conf_structure
 
 Additional information on WordPress Hardening can also be found on:
-
 https://datarope.eu
