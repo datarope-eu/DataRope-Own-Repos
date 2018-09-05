@@ -9,6 +9,9 @@ The template file comes in two variations:
 - one only containing the raw PHP (including the usual WP.org explanations)
 - the other annotated to explain my alterations
 
+## Run WP on NGINX
+I've assembled a few config files and a nice infographic detailing how to run WordPress on NGINX. 
+Helps with both website security and performance. Have a look at the wp-on-NGINX in this repo!
 
 ## Further reading
 Readers interested in taking the deep dive into Hardening WordPress installs might like the following Codex page:
