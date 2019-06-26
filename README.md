@@ -1,7 +1,7 @@
 # WP-CONFIG-HARDENED
-### Make your WordPress install more secure
+### Make your WordPress install (slightly) more secure
 
-Proposing an edited version of the standard wp-config-sample.php template distributed with every new WordPress install.
+An edited version of the standard wp-config-sample.php template distributed with every new WordPress install.
 
 The goal is to contribute to a safer, and more secure CMS and minimize users' security concerns right from the start.
 
@@ -22,3 +22,7 @@ Additional information on WordPress Hardening can also be found on:
 
 https://datarope.eu
 
+## Related Gist on php.ini-settings
+A Gist I recently created covering recommended security-related settings in php.ini may be also be helpful. Check out the comments and included links at the bottom, where you can read up on the background info. (As of June 2019).
+
+https://gist.github.com/datarope-eu/e7b291523f36577bd9b85d8e98b4b9b8
